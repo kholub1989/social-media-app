@@ -1,7 +1,7 @@
-const Post = require("../../models/Post");
 const { AuthenticationError, UserInputError } = require("apollo-server");
 
 const checkAuth = require("../../util/check-auth");
+const Post = require("../../models/Post");
 
 module.exports = {
   Mutation: {
@@ -9,7 +9,7 @@ module.exports = {
       const { username } = checkAuth(context);
       if (body.trim() === "") {
         throw new UserInputError("Empty comment", {
-          error: {
+          errors: {
             body: "Comment body must not empty",
           },
         });
@@ -24,9 +24,7 @@ module.exports = {
         });
         await post.save();
         return post;
-      } else {
-        throw new UserInputError("Post not found");
-      }
+      } else throw new UserInputError("Post not found");
     },
     async deleteComment(_, { postId, commentId }, context) {
       const { username } = checkAuth(context);

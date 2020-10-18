@@ -17,9 +17,7 @@ function generateToken(user) {
       username: user.username,
     },
     SECRET_KEY,
-    {
-      expiresIn: "1h",
-    }
+    { expiresIn: "1h" }
   );
 }
 
@@ -70,8 +68,8 @@ module.exports = {
       const user = await User.findOne({ username });
       if (user) {
         throw new UserInputError("Username is taken", {
-          error: {
-            username: "this username is taken",
+          errors: {
+            username: "This username is taken",
           },
         });
       }
