@@ -15,9 +15,9 @@ function App() {
     <Router>
       <Container>
         <MenuBar />
-        <Route exact patch="/" component={Home} />
-        <Route exact patch="/login" component={Login} />
-        <Route exact patch="/register" component={Register} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
       </Container>
     </Router>
   );
