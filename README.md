@@ -6,9 +6,6 @@
 ![social-media-app](https://i.ibb.co/yqJqZtF/Screen-Shot-2020-10-24-at-7-36-10-PM.png)
 
 
-Social media app using MongoDB, Express, Node, React, GraphQL, 
-and Node (the MERNG stack). I'll learn how to implement a GraphQL server 
-that uses Node and Express to communicate to a MongoDB Database and fetch 
-and persist data to a social media app back-end.
+Social media app using MongoDB, Express, Node, React, GraphQL, and Node (the MERNG stack). I am implementing a GraphQL server that uses Node and Express to communicate to a MongoDB Database and fetch and persist data to a social media app back-end.
 
 [See project](https://lucid-cray-0e02b8.netlify.app/)
